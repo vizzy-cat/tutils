@@ -70,6 +70,7 @@ static int rm(const char *path) {
 			// that why it's recursive
 			rm(full_name);
 		}
+		closedir(dir);
 
 		// delete the directory
 		if (rmdir(path)) {
